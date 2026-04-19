@@ -54,7 +54,7 @@ document.getElementById("btnEnviar").addEventListener("click", function (e) {
     errores.push({ campo: "message", mensaje: "Por favor, escriba el mensaje." });
   }
 
-  // 🔴 Si hay errores
+  // Si hay errores
   if (errores.length > 0) {
 
     let h4 = document.createElement('h4');
@@ -103,7 +103,6 @@ document.getElementById("btnEnviar").addEventListener("click", function (e) {
 });
 
 
-// 2. VALIDACIÓN AL SALIR DEL CAMPO (ESTO VA FUERA)
 const inputs = [
   document.getElementById("name"),
   document.getElementById("email"),
@@ -129,3 +128,6 @@ inputs.forEach(input => {
     }
   });
 });
+
+
+
