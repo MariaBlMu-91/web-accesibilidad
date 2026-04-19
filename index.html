@@ -25,7 +25,7 @@
         <div class="nav-right">
           <ul class="nav-links">
             <li><a href="#main-content" class="btn-tertiary">El curso</a></li>
-            <li><a href="#precio" class="btn-tertiary">Precio y fechas</a></li>
+            <li><a href="#precio-fechas" class="btn-tertiary">Precio y fechas</a></li>
             <li><a href="#profesorado" class="btn-tertiary">Profesorado</a></li>
             <li><a href="#testimonios" class="btn-tertiary">Testimonios</a></li>
             <!--<li><a href="#contacto">Contacto</a></li>-->
@@ -154,7 +154,8 @@
           <img
             src="images/profes/profe_fundamentos.png"
             alt=""
-          />
+            aria-hidden="true"
+          /> <!-- ya que el alt="", he puesto el aria-hidden="true" para que el elemento no exista en el árbol de accesibilidad y evitar generar ruido -->
           <div class="teacher-text">
             <div class="teacher-header">
             <h3 class="text-h3">Laura Martín</h3>
@@ -172,7 +173,8 @@
           <img
             src="images/profes/profe_diseno.png"
             alt=""
-          />
+            aria-hidden="true"
+          /> 
           <div class="teacher-text">
             <div class="teacher-header">
             <h3 class="text-h3">Carlos López</h3>
@@ -189,6 +191,7 @@
           <img
             src="images/profes/profe_programacion.png"
             alt=""
+            aria-hidden="true"
           />
           <div class="teacher-text">
             <div class="teacher-header">
@@ -206,7 +209,8 @@
           <img
             src="images/profes/profe_evaluacion.png"
             alt=""
-          />
+            aria-hidden="true" 
+          /> 
           <div class="teacher-text">
             <div class="teacher-header">
             <h3 class="text-h3">Miguel Ruiz</h3>
@@ -222,7 +226,7 @@
       </div>
     </section>
 
-    <section id="precio" class="two-columns bg-color">
+    <section id="precio-fechas" class="two-columns bg-color">
       <div class="left">
         <h2 class="text-h2">Precio y fechas</h2>
         <p class="text-data">199€</p>
@@ -245,16 +249,16 @@
         </div>
 
         <form id="contactForm">
-          <label class=text-label for="name">Nombre</label>
-          <input id="name" name="name" type="text" required />
+          <label class="text-label" for="name">Nombre</label>
+          <input id="name" name="name" type="text" required aria-describedby="error-name"/>
           <span class="error-text" id="error-name"></span>
 
-          <label class=text-label for="email">Correo</label>
-          <input id="email" name="email" type="email" required />
+          <label class="text-label" for="email">Correo</label>
+          <input id="email" name="email" type="email" required aria-describedby="error-email"/>
           <span class="error-text" id="error-email"></span>
 
-          <label class=text-label for="message">Mensaje</label>
-          <textarea id="message" name="message" aria-label="Mensaje" required></textarea>
+          <label class="text-label" for="message">Mensaje</label>
+          <textarea id="message" name="message" required aria-describedby="error-message"></textarea>
           <span class="error-text" id="error-message"></span>
 
           <button type="submit" class="btn btn-secondary" id="btnEnviar">Contáctanos</button>
@@ -301,7 +305,7 @@
         <div class="faq-item">
           <button class="faq-question" id="faq-btn-1" aria-expanded="false" aria-controls="faq-panel-1">
             ¿Necesito experiencia previa?
-            <span class="material-icons chevron">expand_more</span>
+            <span class="material-icons chevron" aria-hidden="true">expand_more</span>
           </button>
 
           <div class="faq-answer" id="faq-panel-1" role="region" aria-labelledby="faq-btn-1" hidden>
@@ -316,7 +320,7 @@
         <div class="faq-item">
           <button class="faq-question" id="faq-btn-2" aria-expanded="false" aria-controls="faq-panel-2">
             ¿Obtengo certificado?
-            <span class="material-icons chevron">expand_more</span>
+            <span class="material-icons chevron" aria-hidden="true">expand_more</span>
           </button>
 
           <div class="faq-answer" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2" hidden>
@@ -328,7 +332,7 @@
         <div class="faq-item">
           <button class="faq-question" id="faq-btn-3" aria-expanded="false" aria-controls="faq-panel-3">
             ¿Hay acceso a grabaciones?
-            <span class="material-icons chevron">expand_more</span>
+            <span class="material-icons chevron" aria-hidden="true">expand_more</span>
           </button>
 
           <div class="faq-answer" id="faq-panel-3" role="region" aria-labelledby="faq-btn-3" hidden>
@@ -353,7 +357,7 @@
         <!-- Navegación -->
         <nav class="footer-nav">
           <h2 class="text-h4">Enlaces útiles del curso</h2>
-          <a href="#curso">Temario</a>
+          <a href="#modulos">Temario</a>
           <a href="#profesorado">Profesorado</a>
           <a href="#contacto">Contacto</a>
         </nav>
@@ -361,9 +365,9 @@
         <!-- Navegación -->
         <nav class="footer-nav">
           <h2 class="text-h4">Aviso legal y privacidad</h2>
-          <a href="#curso">Política de privacidad</a>
-          <a href="#profesorado">Términos y condiciones</a>
-          <a href="#contacto">Declaración de accesibilidad</a>
+          <a href="https://example.com">Política de privacidad</a>
+          <a href="https://example.com">Términos y condiciones</a>
+          <a href="https://example.com">Declaración de accesibilidad</a>
         </nav>
 
         <!-- Social -->
@@ -371,19 +375,19 @@
           <h2 class="text-h4">Redes sociales</h2>
           <div class="footer-social">
             
-            <a href="#" class="social-link" aria-label="LinkedIn">
+            <a href="https://example.com" class="social-link" aria-label="LinkedIn">
               <img src="images/rrss/logo_linkedin.svg" alt="" aria-hidden="true" />
             </a>
 
-            <a href="#" class="social-link" aria-label="Instagram">
+            <a href="https://example.com" class="social-link" aria-label="Instagram">
               <img src="images/rrss/logo_instagram.svg" alt="" aria-hidden="true" />
             </a>
 
-            <a href="#" class="social-link" aria-label="YouTube">
+            <a href="https://example.com" class="social-link" aria-label="YouTube">
               <img src="images/rrss/logo_youtube.svg" alt="" aria-hidden="true" />
             </a>
 
-            <a href="#" class="social-link" aria-label="X">
+            <a href="https://example.com" class="social-link" aria-label="X">
               <img src="images/rrss/logo_x.svg" alt="" aria-hidden="true" />
             </a>
           </div>
