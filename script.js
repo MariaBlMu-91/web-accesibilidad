@@ -129,5 +129,14 @@ inputs.forEach(input => {
   });
 });
 
+document.getElementById("downloadBtn").addEventListener("click", () => {
+  const link = document.createElement("a");
+  link.href = "docs/plan-estudios.pdf";
+  link.download = "plan-estudios.pdf";
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+});
+
 
 
